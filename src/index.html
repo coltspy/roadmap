@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PlanFast | Plan With Ai</title>
+<link rel="stylesheet" href="styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+<div class="navbar">
+  <div class="nav-section top">
+    <h1 class="site-title">PlanFast</h1>
+    <!-- Space for other top section content -->
+  </div>
+
+  <div class="nav-section middle">
+    <a href="#" onclick="setActivePage('dashboard')">Roadmap</a>
+    <a href="#" onclick="setActivePage('redirect')">Learn With Ai</a>
+    <a href="#" onclick="setActivePage('premium')">Premium</a>
+    <a href="#" onclick="setActivePage('myLinks')">History</a>
+    
+  </div>
+  <div class="nav-section bottom">
+    <a href="#" onclick="showModal()">Settings</a>
+    <a href="#" class="logout">Log Out</a>
+  </div>
+</div>
+
+<!-- The Modal -->
+<div id="settingsModal" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h1>Settings</h1>
+    <p>Change your settings here.</p>
+    
+    <!-- Dark/Light Mode Toggle -->
+    <div class="toggle-container">
+      <label for="darkModeToggle">Dark Mode:</label>
+      <input type="checkbox" id="darkModeToggle" onclick="toggleDarkMode()">
+    </div>
+    
+    <!-- Attribution text -->
+    <p class="attribution">Colton Spyker @2023</p>
+  </div>
+</div>
+
+
+<!-- The Logout Modal -->
+<div id="logoutModal" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>Are you sure you want to log out?</p>
+    <button id="logoutBtn">Log Out</button>
+  </div>
+</div>
+
+
+<div class="main-content">
+  <div id="landingContent" class="content-section">
+    <div class="container">
+      <h1 id="landingTitle">A faster way to learn, <br> with Artificial Intelligence.</h1>
+      <p id="landingTitle">PlanFast is a learning platform  that helps you learn new skills in the most efficient way possible.</p>
+      <button onclick="setActivePage('dashboard')">Get Started</button>
+    </div>
+    <div id="landingImageContainer">
+      <img src="stock.png" alt="A descriptive alt text">
+    </div>
+  </div>
+  <div id="dashboardContent" class="content-section" style="display: none;">
+    <div class="container left">
+      <h1>Learning Roadmap</h1>
+          <div class="form-group">
+              <label for="topic">Topic:</label>
+              <textarea id="topic" placeholder="e.g., Spanish"></textarea>
+          </div>
+          <div class="form-group">
+              <label for="timeAvailable">Time Available:</label>
+              <input type="text" id="timeAvailable" placeholder="e.g., 3 weeks">
+          </div>
+          <div class="form-group">
+              <label for="skillLevel">Current Skill Level:</label>
+              <select id="skillLevel">
+                  <option value="none">None</option>
+                  <option value="beginner">Beginner</option>
+                  <option value="intermediate">Intermediate</option>
+                  <option value="advanced">Advanced</option>
+              </select>
+          </div>
+          <div class="form-group">
+              <label for="specificGoals">Specific Goals:</label>
+              <textarea id="specificGoals" placeholder="e.g., hold a 5-minute conversation"></textarea>
+          </div>
+          <div class="form-group">
+              <label for="dailyCommitment">Daily Commitment (hours):</label>
+              <input type="number" id="dailyCommitment" placeholder="e.g., 2">
+          </div>
+          <button onclick="getRoadmap()">Get Roadmap</button>
+      </div>
+      <div class="output-container right">
+
+        <div id="roadmapOutput"></div>
+    </div>
+  </div>
+
+
+  <div id="redirectContent" class="content-section" style="display: none;">
+    <!-- Redirect content goes here -->
+  </div>
+
+  <div id="myLinksContent" class="content-section" style="display: none;">
+    <!-- My Links content goes here -->
+  </div>
+
+  <div id="premiumContent" class="content-section" style="display: none;">
+    <!-- Premium content goes here -->
+  </div>
+
+
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,345 @@
+body, h1, .navbar a {
+  font-family: 'Open Sans', sans-serif; /* This applies the 'Open Sans' font to your body text, h1 tags, and navbar links */
+  margin: 0;
+  padding: 0;
+}
+body { /* Assuming you have a specific color for your website */
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff; /* This is a placeholder color; change it to your site's color */
+}
+.navbar {
+  z-index: 100; /* Higher value to bring it above other content */
+  position: fixed; /* This makes the navbar stay at the top of the page */
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+.nav-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.nav-section.top {
+  margin-bottom: 50px; /* Pushes 'Dashboard' and 'My Links' down */
+}
+.nav-section.bottom {
+  margin-top: auto; /* Pushes 'Settings' and 'Logout' up */
+  margin-bottom: 50px;
+}
+.main-content {
+  margin-left: 220px; /* Adjust as necessary to suit your layout */
+  padding: 20px;
+}
+
+.navbar a {
+  color: #555555; /* Adjust color so it stands out from the website's color */
+  font-weight: bold; /* Add bold text */
+  padding: 12px 1px; /* Adjust padding to preference */
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  text-align: center;
+  border-radius: 10px; /* This makes the buttons rounded */
+  margin-bottom: 8px; /* Space between buttons */
+  transition: background-color 0.3s, color 0.3s; /* Makes color change smoothly */
+}
+.navbar a:hover {
+  color: #246aff; /* Change the text color on hover */
+}
+.navbar a.active {
+  color: #246aff; /* Blue text */
+}
+
+.site-title {
+  color: #246aff;
+  font-weight: bold;
+  padding: 15px;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box; /* Ensures that padding doesn't add to the width */
+}
+
+
+#premiumContent {
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 200px); /* Assuming your navbar is 200px tall, adjust as necessary */
+  width: 100%;
+}
+
+.centered-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row; /* Makes the child elements (the boxes) sit side by side */
+  gap: 10px; /* Creates a gap between your boxes */
+}
+
+.premium-box {
+  /* Your existing styles for the box... */
+  width: 150px; /* Specify a width */
+  height: 100px; /* Specify a height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center; /* To center the text inside the box */
+  border-radius: 10px; /* Makes the boxes rounded */
+}
+
+
+/* Modal Content/Box */
+.modal-content {
+  display: none; /* Hidden by default */
+  position: fixed; /* To position the close button and content correctly */
+  top: 0;
+  left: 0;
+  background-color: #fefefe;
+  margin: 5% auto; /* 5% from the top and centered */
+  transform: translate(67%, 50%); /* Adjust the exact position */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 40%; /* Could be more or less, depending on screen size */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); /* Shadow for 3D effect */
+  border-radius: 10px; /* Rounded corners for the content */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Style for the buttons inside the modal */
+.modal-content button {
+  padding: 10px 20px;
+  margin: 5px;
+  border: none;
+  outline: none;
+  border-radius: 5px; /* Slight roundness */
+  background-color: #333; /* Dark background */
+  color: white; /* Light text */
+  cursor: pointer;
+  transition: background 0.9s ease-in-out;
+}
+
+.modal-content button:hover {
+  background-color: #555; /* Lighten the button on hover */
+}
+
+#logoutBtn {
+  background-color: #bf0404; /* Red background */
+  color: white; /* White text */
+  /* Other styling properties like padding, border-radius, etc. */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#logoutBtn:hover {
+  background-color: #ff0000; /* Lighter red on hover for effect */
+}
+.roadmap-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.input-section {
+  width: 45%;
+}
+
+.output-section {
+  width: 45%;
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 0.9em;
+}
+
+.form-group textarea,
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 0.9em;
+}
+
+.form-group textarea {
+  resize: vertical; /* Allow vertical resizing only */
+  min-height: 100px;
+}
+
+.button {
+  background-color: #246aff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9em;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: #1a4d8f;
+}
+.content-section {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.container {
+  flex: 1; /* Makes sure both columns take up equal space */
+  padding-right: 20px; /* Adds some space between the columns */
+}
+
+.output-container {
+  flex: 1; /* Makes sure both columns take up equal space */
+  background-color: #f5f5f5; /* Light grey background for the output box */
+  border-radius: 10px; /* Rounded corners for the output box */
+  padding: 20px; /* Adds some padding inside the output box */
+  height: fit-content; /* Adjust height based on content */
+}
+
+.left {
+  max-width: 50%; /* Ensures this section doesn't take up more than half the width */
+}
+
+.right {
+  max-width: 50%; /* Ensures this section doesn't take up more than half the width */
+}
+
+#landingContent {
+  margin-top: 100px; /* Adjust as needed */
+}
+
+#landingContent h1 {
+  font-size: 3em; /* Makes the text larger */
+  font-weight: bold; /* Makes the text bold */
+  color: #333; /* Sets the text color */
+  margin-left: -100px; /* adjust as needed */
+  margin-bottom: 50px; /* Adds some space below the text */
+  text-align: center; /* Centers the text */
+}
+
+#landingContent p {
+  font-size: 1em;
+  line-height: 1.5;
+  margin-bottom: 40px;
+}
+
+#landingContent button {
+  margin-left: 230px;
+  padding: 10px 30px;
+  font-size: 1.1em;
+  border: none;
+  border-radius: 9px;
+  cursor: pointer;
+  background-color: #49abe8;
+  color: white;
+  transition: background-color 0.3s;
+}
+
+#landingContent button:hover {
+  background-color: #49cdf1;
+}
+
+
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+body.dark-mode .navbar {
+  background-color: #1e1e1e;
+  color: #ffffff;
+}
+
+body.dark-mode .modal {
+  background-color: #2c2c2c;
+  color: #ffffff;
+}
+
+body.dark-mode .modal-content {
+  background-color: #333333;
+  color: #ffffff;
+}
+
+body.dark-mode a {
+  color: #ffffff;
+}
+
+
+
+.navbar.dark-mode a:hover {
+  color: #cccccc; /* Light grey text on hover */
+}
+
+.navbar.dark-mode a.active {
+  color: #cccccc; /* Light grey text for active link */
+}
+
+.output-section.dark-mode {
+  background-color: #292929; /* Dark grey background for output section */
+}
+
+#landingContent.dark-mode {
+  color: #ffffff; /* White text */
+}
+#landingTitle.dark-mode {
+  color: #ffffff; /* White text */
+}
+
+#landingTitle {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 500; /* set to medium */
+  font-size: 3em; /* Adjust size as needed */
+}
+
+#landingImageContainer {
+  max-width: 50%;
+}
+
+#landingImageContainer img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px; /* Rounded corners for the image */
+}
